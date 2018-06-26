@@ -12,6 +12,10 @@
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
     },
     {
+        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_single_finger.png.flat",
+        "source": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\src\\main\\res\\drawable-xxhdpi\\single_finger.png"
+    },
+    {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
         "source": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\src\\main\\res\\menu\\main.xml"
     },
@@ -36,12 +40,12 @@
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
-        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
-        "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\69b87438a3767bafa2d8b1728569bfed\\res\\layout\\notification_template_big_media_narrow.xml"
-    },
-    {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_dark.xml.flat",
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable\\tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\69b87438a3767bafa2d8b1728569bfed\\res\\layout\\notification_template_big_media_narrow.xml"
     },
     {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable_abc_textfield_search_material.xml.flat",
@@ -884,6 +888,10 @@
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
+        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_fingertip_contact.png.flat",
+        "source": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\src\\main\\res\\drawable-xxhdpi\\fingertip_contact.png"
+    },
+    {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -1258,6 +1266,10 @@
     {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable_abc_list_selector_holo_light.xml.flat",
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_make_a_fist.png.flat",
+        "source": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\src\\main\\res\\drawable-xxhdpi\\make_a_fist.png"
     },
     {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -1642,6 +1654,10 @@
     {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\PC-LCL\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.2.aar\\8b47e3721e9aea788f0d33ea8b882b02\\res\\drawable-mdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_grip.png.flat",
+        "source": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\src\\main\\res\\drawable-xxhdpi\\grip.png"
     },
     {
         "merged": "F:\\Android_work\\RehabilitationSoftRobot-master\\RehabilitationSoftRobot\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_btn_colored_material.xml.flat",

@@ -18,9 +18,14 @@
 package com.example.android.RehabilitationSoftRobot;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.ViewAnimator;
 
 import com.example.android.common.activities.SampleActivityBase;
@@ -28,6 +33,9 @@ import com.example.android.common.logger.Log;
 import com.example.android.common.logger.LogFragment;
 import com.example.android.common.logger.LogWrapper;
 import com.example.android.common.logger.MessageOnlyLogFilter;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * A simple launcher activity containing a summary sample description, sample log and a custom
@@ -42,6 +50,33 @@ public class MainActivity extends SampleActivityBase {
 
     // Whether the Log Fragment is currently shown
     private boolean mLogShown;
+    private TextView mDataView;
+    private BluetoothChatFragment myFragment;
+
+    private Timer timer = new Timer();
+    private final Handler handler = new Handler(){
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case 1:
+                    mDataView.setText((String)msg.obj);
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+
+    };
+
+    TimerTask task = new TimerTask(){
+        public void run() {
+            Message message = new Message();
+            double[] fingerData = BluetoothChatFragment.fingerData;
+            String myMsg = "手指的数据依次为：["+ Double.toString(fingerData[0])+","+Double.toString(fingerData[1])+","
+                    +Double.toString(fingerData[2])+","+Double.toString(fingerData[3])+","+Double.toString(fingerData[4])+"]";
+            message.what = 1;
+            message.obj = myMsg;
+            handler.sendMessage(message);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,11 +85,15 @@ public class MainActivity extends SampleActivityBase {
 
         if (savedInstanceState == null) {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            BluetoothChatFragment fragment = new BluetoothChatFragment();
-            transaction.replace(R.id.sample_content_fragment, fragment);
+            myFragment = new BluetoothChatFragment();
+            transaction.replace(R.id.sample_content_fragment, myFragment);
             transaction.commit();
         }
+        mDataView = (TextView) findViewById(R.id.textView4);
+        timer.schedule(task, 1000,1000);
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,5 +145,9 @@ public class MainActivity extends SampleActivityBase {
         msgFilter.setNext(logFragment.getLogView());
 
         Log.i(TAG, "Ready");
+    }
+
+    public void sendCom(View view) {
+        myFragment.sendCom(view);
     }
 }

@@ -44,6 +44,9 @@ import android.widget.Toast;
 
 import com.example.android.common.logger.Log;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 /**
  * This fragment controls Bluetooth to communicate with other devices.
  */
@@ -60,6 +63,71 @@ public class BluetoothChatFragment extends Fragment {
     private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
+    private TextView mDataText;
+    static public double[] fingerData = new double[5];
+
+    static private void writeData(String dataString)
+    {
+        String[] data = dataString.split("[|]|,|[/]|[+]");
+        double[] fingerDataTemp = new double[5];
+        for (int i = 0; i < fingerDataTemp.length; i++) {
+            fingerDataTemp[i] = fingerData[i];
+        }
+        if(data.length==5)
+        {
+            try {
+                for (int i = 0; i < 5; i++) {
+                    fingerData[i] = Double.parseDouble(data[i]);
+                }
+            }
+            catch (Exception e) {
+                for (int i = 0; i < 5; i++) {
+                    fingerData[i] = fingerDataTemp[i];
+                }
+            }
+
+        }
+    }
+
+    public void sendCom(View view)
+    {
+        String comMsg;
+        switch (view.getId()){
+            case (R.id.buttonA):
+                comMsg = "A\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonB):
+                comMsg = "B\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonC):
+                comMsg = "C\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonD):
+                comMsg = "D\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonE):
+                comMsg = "E\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonF):
+                comMsg = "F\r\n";
+                sendMessage(comMsg);
+                break;
+            case (R.id.buttonG):
+                comMsg = "G\r\n";
+                sendMessage(comMsg);
+                break;
+
+                default:
+                    break;
+
+
+        }
+    }
 
     /**
      * Name of the connected device
@@ -99,6 +167,7 @@ public class BluetoothChatFragment extends Fragment {
             Toast.makeText(activity, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             activity.finish();
         }
+
     }
 
 
@@ -151,6 +220,7 @@ public class BluetoothChatFragment extends Fragment {
         mConversationView = (ListView) view.findViewById(R.id.in);
         mOutEditText = (EditText) view.findViewById(R.id.edit_text_out);
         mSendButton = (Button) view.findViewById(R.id.button_send);
+        mDataText = (TextView) view.findViewById(R.id.textView_dataview);
     }
 
     /**
@@ -306,6 +376,8 @@ public class BluetoothChatFragment extends Fragment {
                     // construct a string from the valid bytes in the buffer
                     String readMessage = new String(readBuf, 0, msg.arg1);
                     mConversationArrayAdapter.add(mConnectedDeviceName + ":  " + readMessage);
+                    mDataText.setText(readMessage);
+                    writeData(readMessage);
                     break;
                 case Constants.MESSAGE_DEVICE_NAME:
                     // save the connected device's name
